@@ -22,15 +22,13 @@ function Home() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100%",
-        width: "100%",
+        minHeight: "100vh",
       }}
     >
       <Box
         sx={{
           flex: 1,
           mt: 8,
-          width: "100%",
         }}
       >
         <Container
@@ -62,7 +60,6 @@ function Home() {
             <Typography
               variant="h5"
               color="text.secondary"
-              paragraph
               sx={{
                 maxWidth: { xs: "100%", sm: 600 },
                 mx: "auto",
@@ -119,8 +116,8 @@ function Home() {
             </Box>
           </Box>
 
-          <Grid2 container spacing={4} sx={{ mb: 8 }}>
-            <Grid2 item xs={12} sm={6} md={4}>
+          <Grid2 container spacing={4} sx={{ mb: 8, justifyContent: "center" }}>
+            <Grid2 item="true" xs={12} sm={6} md={4}>
               <Card elevation={2}>
                 <CardContent sx={{ textAlign: "center", py: 4 }}>
                   <SpeedIcon
@@ -135,7 +132,7 @@ function Home() {
                 </CardContent>
               </Card>
             </Grid2>
-            <Grid2 item xs={12} sm={6} md={4}>
+            <Grid2 item="true" xs={12} sm={6} md={4}>
               <Card elevation={2}>
                 <CardContent sx={{ textAlign: "center", py: 4 }}>
                   <SecurityIcon
@@ -150,7 +147,7 @@ function Home() {
                 </CardContent>
               </Card>
             </Grid2>
-            <Grid2 item xs={12} sm={6} md={4}>
+            <Grid2 item="true" xs={12} sm={6} md={4}>
               <Card elevation={2}>
                 <CardContent sx={{ textAlign: "center", py: 4 }}>
                   <IntegrationInstructionsIcon

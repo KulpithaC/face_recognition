@@ -26,9 +26,9 @@ export const router = createBrowserRouter([
       {
         path: "/face-check",
         element: (
-          <PrivateRoute>
-            <FaceCheck />
-          </PrivateRoute>
+          // <PrivateRoute>
+          <FaceCheck />
+          // </PrivateRoute>
         ),
       },
     ],

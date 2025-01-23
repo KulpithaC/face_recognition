@@ -32,25 +32,25 @@ function Login() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    setIsLoading(true);
-
-    try {
-      await authService.login({
-        email: formData.email,
-        password: formData.password,
-        remember: formData.rememberMe,
-      });
-      navigate("/face-check");
-    } catch (err) {
-      setError(
-        err.response?.data?.message || "Login failed. Please try again."
-      );
-    } finally {
-      setIsLoading(false);
-    }
+  const handleSubmit = () => {
+    // e.preventDefault();
+    // setError("");
+    // setIsLoading(true);
+    navigate("/face-check");
+    // try {
+    //   // await authService.login({
+    //   //   email: formData.email,
+    //   //   password: formData.password,
+    //   //   remember: formData.rememberMe,
+    //   // });
+    //   navigate("/face-check");
+    // } catch (err) {
+    //   setError(
+    //     err.response?.data?.message || "Login failed. Please try again."
+    //   );
+    // } finally {
+    //   setIsLoading(false);
+    // }
   };
 
   const handleSocialLogin = async (provider) => {

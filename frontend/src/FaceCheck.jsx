@@ -73,160 +73,165 @@ const FaceCheck = () => {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
-      <Box sx={{ width: "100%" }}>
-        <Grid container spacing={2} sx={{ width: "100%" }}>
-          {/* Upload Forms Section */}
-          <Grid item xs={12} md={5}>
-            <Box mb={3} sx={{ boxShadow: 3, borderRadius: 1 }}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    Register New Face
-                  </Typography>
-                  <form>
-                    <UploadZone>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        id="registerInput"
-                        style={{ display: "none" }}
-                        onChange={handleUploadChange}
-                      />
-                      <label htmlFor="registerInput">
-                        <IconButton color="primary">
-                          <UploadIcon fontSize="large" />
-                        </IconButton>
-                        <Typography variant="body2" color="textSecondary">
-                          Click to upload or drag and drop
-                        </Typography>
-                        <Typography variant="caption" color="textSecondary">
-                          PNG, JPG, GIF up to 10MB
-                        </Typography>
-                      </label>
-                    </UploadZone>
-                    <Button
-                      type="submit"
-                      fullWidth
-                      variant="contained"
-                      color="primary"
-                      sx={{ mt: 2 }}
-                    >
-                      Register Face
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </Box>
-            <Box mb={3} sx={{ boxShadow: 3, borderRadius: 1 }}>
-              <Card variant="outlined">
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    Compare Face
-                  </Typography>
-                  <form>
-                    <CompareZone>
-                      <input
-                        type="file"
-                        accept="image/*"
-                        id="compareInput"
-                        style={{ display: "none" }}
-                      />
-                      <label htmlFor="compareInput">
-                        <IconButton color="success">
-                          <UploadIcon fontSize="large" />
-                        </IconButton>
-                        <Typography variant="body2" color="textSecondary">
-                          Click to upload or drag and drop
-                        </Typography>
-                        <Typography variant="caption" color="textSecondary">
-                          PNG, JPG, GIF up to 10MB
-                        </Typography>
-                      </label>
-                    </CompareZone>
-                    <Button
-                      type="submit"
-                      fullWidth
-                      variant="contained"
-                      color="success"
-                      sx={{ mt: 2 }}
-                    >
-                      Compare Face
-                    </Button>
-                  </form>
-                  <Box
-                    id="result"
-                    sx={{
-                      mt: 2,
-                      p: 2,
-                      backgroundColor: "grey.50",
-                      textAlign: "center",
-                      display: "none",
-                    }}
-                  >
-                    {/* Results will appear here */}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Box>
-          </Grid>
+    // <Box sx={{ width: "100%" }}></Box>
+    //   <Box sx={{ width: "100%" }}>
+    //     <Grid container spacing={2} sx={{ width: "100%" }}>
+    //       {/* Upload Forms Section */}
+    //       <Grid item xs={12} md={5}>
+    //         <Box mb={3} sx={{ boxShadow: 3, borderRadius: 1 }}>
+    //           <Card variant="outlined">
+    //             <CardContent>
+    //               <Typography variant="h6" gutterBottom>
+    //                 Register New Face
+    //               </Typography>
+    //               <form>
+    //                 <UploadZone>
+    //                   <input
+    //                     type="file"
+    //                     accept="image/*"
+    //                     id="registerInput"
+    //                     style={{ display: "none" }}
+    //                     onChange={handleUploadChange}
+    //                   />
+    //                   <label htmlFor="registerInput">
+    //                     <IconButton color="primary">
+    //                       <UploadIcon fontSize="large" />
+    //                     </IconButton>
+    //                     <Typography variant="body2" color="textSecondary">
+    //                       Click to upload or drag and drop
+    //                     </Typography>
+    //                     <Typography variant="caption" color="textSecondary">
+    //                       PNG, JPG, GIF up to 10MB
+    //                     </Typography>
+    //                   </label>
+    //                 </UploadZone>
+    //                 <Button
+    //                   type="submit"
+    //                   fullWidth
+    //                   variant="contained"
+    //                   color="primary"
+    //                   sx={{ mt: 2 }}
+    //                 >
+    //                   Register Face
+    //                 </Button>
+    //               </form>
+    //             </CardContent>
+    //           </Card>
+    //         </Box>
+    //         <Box mb={3} sx={{ boxShadow: 3, borderRadius: 1 }}>
+    //           <Card variant="outlined">
+    //             <CardContent>
+    //               <Typography variant="h6" gutterBottom>
+    //                 Compare Face
+    //               </Typography>
+    //               <form>
+    //                 <CompareZone>
+    //                   <input
+    //                     type="file"
+    //                     accept="image/*"
+    //                     id="compareInput"
+    //                     style={{ display: "none" }}
+    //                   />
+    //                   <label htmlFor="compareInput">
+    //                     <IconButton color="success">
+    //                       <UploadIcon fontSize="large" />
+    //                     </IconButton>
+    //                     <Typography variant="body2" color="textSecondary">
+    //                       Click to upload or drag and drop
+    //                     </Typography>
+    //                     <Typography variant="caption" color="textSecondary">
+    //                       PNG, JPG, GIF up to 10MB
+    //                     </Typography>
+    //                   </label>
+    //                 </CompareZone>
+    //                 <Button
+    //                   type="submit"
+    //                   fullWidth
+    //                   variant="contained"
+    //                   color="success"
+    //                   sx={{ mt: 2 }}
+    //                 >
+    //                   Compare Face
+    //                 </Button>
+    //               </form>
+    //               <Box
+    //                 id="result"
+    //                 sx={{
+    //                   mt: 2,
+    //                   p: 2,
+    //                   backgroundColor: "grey.50",
+    //                   textAlign: "center",
+    //                   display: "none",
+    //                 }}
+    //               >
+    //                 {/* Results will appear here */}
+    //               </Box>
+    //             </CardContent>
+    //           </Card>
+    //         </Box>
+    //       </Grid>
 
-          {/* Images List Section */}
-          <Grid item xs={12} md={3}>
-            <Card
-              variant="outlined"
-              sx={{ height: "100%", boxShadow: 3, borderRadius: 1 }}
-            >
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Uploaded Images
-                </Typography>
-                <CustomScrollbar id="imageList">
-                  {/* Dynamically populated images */}
-                </CustomScrollbar>
-              </CardContent>
-            </Card>
-          </Grid>
+    //       {/* Images List Section */}
+    //       <Grid item xs={12} md={3}>
+    //         <Card
+    //           variant="outlined"
+    //           sx={{ height: "100%", boxShadow: 3, borderRadius: 1 }}
+    //         >
+    //           <CardContent>
+    //             <Typography variant="h6" gutterBottom>
+    //               Uploaded Images
+    //             </Typography>
+    //             <CustomScrollbar id="imageList">
+    //               {/* Dynamically populated images */}
+    //             </CustomScrollbar>
+    //           </CardContent>
+    //         </Card>
+    //       </Grid>
 
-          {/* Preview Section */}
-          <Grid item xs={12} md={4}>
-            <Card
-              variant="outlined"
-              sx={{ height: "100%", boxShadow: 3, borderRadius: 1 }}
-            >
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Image Preview
-                </Typography>
-                <Box
-                  id="imagePreview"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "24rem",
-                    backgroundColor: "grey.50",
-                    borderRadius: 1,
-                    border: "2px solid",
-                    borderColor: "grey.200",
-                  }}
-                >
-                  {selectedImage ? (
-                    <img
-                      src={selectedImage}
-                      alt="Preview"
-                      style={{ maxHeight: "100%", maxWidth: "100%" }}
-                    />
-                  ) : (
-                    <Typography color="textSecondary">
-                      No image selected
-                    </Typography>
-                  )}
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+    //       {/* Preview Section */}
+    //       <Grid item xs={12} md={4}>
+    //         <Card
+    //           variant="outlined"
+    //           sx={{ height: "100%", boxShadow: 3, borderRadius: 1 }}
+    //         >
+    //           <CardContent>
+    //             <Typography variant="h6" gutterBottom>
+    //               Image Preview
+    //             </Typography>
+    //             <Box
+    //               id="imagePreview"
+    //               sx={{
+    //                 display: "flex",
+    //                 alignItems: "center",
+    //                 justifyContent: "center",
+    //                 height: "24rem",
+    //                 backgroundColor: "grey.50",
+    //                 borderRadius: 1,
+    //                 border: "2px solid",
+    //                 borderColor: "grey.200",
+    //               }}
+    //             >
+    //               {selectedImage ? (
+    //                 <img
+    //                   src={selectedImage}
+    //                   alt="Preview"
+    //                   style={{ maxHeight: "100%", maxWidth: "100%" }}
+    //                 />
+    //               ) : (
+    //                 <Typography color="textSecondary">
+    //                   No image selected
+    //                 </Typography>
+    //               )}
+    //             </Box>
+    //           </CardContent>
+    //         </Card>
+    //       </Grid>
+    //     </Grid>
+    //   </Box>
+    // </Box>
+    <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={{ flex: 1, mt: 8 }}>
+        <Typography>Hello World!</Typography>
       </Box>
     </Box>
   );
