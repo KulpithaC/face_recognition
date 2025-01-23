@@ -1,19 +1,14 @@
-import { useState } from 'react'
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import './App.css'
+import React from "react";
+import AppTheme from "./AppTheme";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>Face Recognition System</h1>
-      
-    </>
-  )
+    <AppTheme>
+      <RouterProvider router={router} />
+    </AppTheme>
+  );
 }
 
-export default App
+export default App;
